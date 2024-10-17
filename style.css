@@ -1,0 +1,277 @@
+/* Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added for better box model handling */
+}
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Header Bar */
+.header {
+    height: 27vh; /* Adjusted for better mobile display */
+    background-image: url("img/background.jpg");
+    background-size: cover;
+    background-color: #666;
+    background-blend-mode: multiply;
+    font-weight: bolder;
+}
+
+.header-container {
+    width: 90%; /* Make it responsive */
+    max-width: 1200px; /* Optional: Limit max width */
+    padding: 20px 0;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center; /* Vertically center items */
+}
+
+.header-container h1 {
+    font-weight: bold;
+    font-size: 2.5rem; /* Responsive font size */
+}
+
+.header-link {
+    padding-top: 25px;
+}
+
+.header-link a {
+    text-decoration: none;
+    font-size: 1rem; /* Responsive font size */
+    color: white;
+    transition: color ease-in-out 0.5s;
+}
+
+.header-link a:hover {
+    color: #e1e1e1;
+}
+
+/* Search Bar */
+.search-box {
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Optional: Limit max width */
+    margin: 10px auto;
+    background-color: #ffffff;
+    border-radius: 4px;
+    display: flex; /* Use flexbox for alignment */
+    overflow: hidden; /* Ensure button doesn't overlap the input */
+}
+
+.search-box input {
+    flex: 1; /* Takes remaining space */
+    padding: 15px 20px; /* Input padding */
+    outline: none;
+    border: none;
+    background-color: white;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1rem; /* Responsive font size */
+}
+
+.search-box button {
+    padding: 0; /* Remove padding */
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer; /* Show pointer cursor on hover */
+    display: flex;
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    width: 50px; /* Fixed width for the button */
+}
+
+/* Icon Style */
+.search-box button i {
+    font-size: 1.2rem; /* Adjust icon size */
+    color: #333; /* Icon color */
+}
+
+/* Responsive Adjustments for Search Box */
+@media (max-width: 768px) {
+    .search-box {
+        width: 95%; /* Increase width on smaller screens */
+    }
+
+    .search-box button {
+        width: 40px; /* Adjust button size on smaller screens */
+    }
+
+    .search-box input {
+        padding: 10px 15px; /* Reduce padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .search-box button {
+        width: 35px; /* Further adjust button size on mobile */
+    }
+
+    .search-box input {
+        padding: 10px 10px; /* Adjust padding on mobile */
+        font-size: 0.9rem; /* Reduce font size on mobile */
+    }
+}
+
+
+/* Main Container */
+.main {
+    background-color: #e1e1e1;
+    padding: 40px;
+    min-height: 63vh;
+}
+
+/* Watermark Area / Start Exploring Section */
+.start-exploring {
+    color: #b1b1b1;
+    width: 90%; /* Make it responsive */
+    max-width: 600px; /* Optional: Limit max width */
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.start-exploring span {
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+/* Movie Container */
+.movie-container {
+    width: 90%; /* Make it responsive */
+    max-width: 800px; /* Optional: Limit max width */
+    background-color: white;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    box-shadow: 1px 2px #a1a1a1;
+}
+
+.movie-poster {
+    width: 50%;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie-details {
+    width: 50%; /* Changed to 50% for better balance */
+    padding: 0 20px;
+}
+
+/* Favourite Items Container */
+.fav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%; /* Make it responsive */
+    max-width: 1200px; /* Optional: Limit max width */
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.fav-item {
+    box-shadow: 1px 2px #a1a1a1;
+    margin: 10px; /* Adjusted margin */
+    width: calc(33.33% - 20px); /* Three items per row */
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.fav-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fav-poster img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.fav-details-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 5px 5px 0;
+}
+
+.fav-movie-name {
+    color: black;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.fav-movie-rating {
+    color: #888;
+    font-style: italic;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-container h1 {
+        font-size: 2rem; /* Smaller header font size */
+    }
+
+    .fav-item {
+        width: calc(50% - 20px); /* Two items per row on tablets */
+    }
+
+    .header {
+        height: 40vh; /* Adjust header height */
+    }
+
+    .movie-container {
+        flex-direction: column; /* Stack movie poster and details */
+    }
+
+    .movie-details {
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container h1 {
+        font-size: 1.5rem; /* Smaller header font size */
+    }
+
+    .fav-item {
+        width: calc(100% - 20px); /* One item per row on mobile */
+    }
+
+    .search-box {
+        flex-direction: column; /* Stack input and button */
+    }
+
+    .search-box button {
+        width: 100%; /* Full width for button on mobile */
+    }
+}
